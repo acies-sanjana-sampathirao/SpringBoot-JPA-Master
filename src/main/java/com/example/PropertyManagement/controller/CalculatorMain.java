@@ -1,10 +1,16 @@
 package com.example.PropertyManagement.controller;
 
-public class CalculatorMain {
+import com.example.PropertyManagement.service.impl.PropertyServiceimpl;
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class CalculatorMain {
+    @Autowired
+    public static PropertyServiceimpl calculatorController;
     public static void main(String[] args){
-        CalculatorController s = new CalculatorController();
-        Double result = s.add(1.2,1.3,5.0);
+
+        PropertyServiceimpl s = new PropertyServiceimpl();
+        Double result = s.add(1.2,1.3);
         System.out.println(result);
     }
+
 }
